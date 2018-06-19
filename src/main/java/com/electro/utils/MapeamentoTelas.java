@@ -1,0 +1,23 @@
+package com.electro.utils;
+
+public enum MapeamentoTelas {
+	
+	ESTOQUE ("estoque/form_estoque");
+	
+	String path;
+	
+	private MapeamentoTelas(String path) {
+		this.path = path;
+	}
+
+	public String getPath() {
+		return path;
+	}
+
+	public void setPath(String path) {
+		this.path = path;
+	}
+	
+		
+
+}

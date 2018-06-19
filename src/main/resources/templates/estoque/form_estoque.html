@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4" >
+<body>
+	<div th:include="layout/cabecalho :: header"></div>	    
+	
+    <div class="container">
+    	<form th:action="@{/salvar}" th:object="${estoque}">
+    	
+	        <div class="form-group col-sm-4">
+	            <label for="exampleInputEmail1">Código</label>
+	            <input type="text" class="form-control" id="codigo" th:field="*{codigo}" aria-describedby="emailHelp" placeholder="Código">
+	        </div>
+	        
+	        <div class="form-group col-sm-8">
+	            <label for="exampleInputEmail1">Descrição</label>
+	            <input type="text" class="form-control" id="descricao" th:field="*{descricao}" aria-describedby="emailHelp" placeholder="Descrição">
+	        </div>
+	        
+	        <div class="form-group col-md-12">
+	            <label for="exampleInputEmail1">Endereço</label>
+	            <input type="text" class="form-control" id="endereco" th:field="*{endereco}" aria-describedby="emailHelp" placeholder="Endereço">
+	        </div>
+	        
+			<div class="col-sm-12">
+				<button type="submit" class="btn btn-primary">Salvar</button>
+				<a th:href="@{/form}" class="btn btn-default">Cancelar</a>
+			</div>
+			
+        </form>    
+    </div>
+	<div th:include="layout/rodape :: footer"></div>	    
+</body>
+</html>
