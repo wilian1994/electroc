@@ -15,22 +15,14 @@
             </tr>
           </thead>
           <tbody>
-            <tr >
-              <td>TESTE</td>    
-              <td>TESTE</td>    
-              <td>TESTE</td>    
-              <td>TESTE</td>    
-              <td>TESTE</td>    
-              <td>TESTE</td>    
-            </tr>
-            <tr >
-              <td>Wilian</td>    
-              <td>Wilian</td>    
-              <td>Wilian</td>    
-              <td>Wilian</td>    
-              <td>Wilian</td>    
-              <td>Wilian</td>    
-              </tr>
+	          <tr th:each="estoque : ${estoques}">
+	              <td><span th:text="${estoque.codigo}"></span></td>
+	              <td><span th:text="${estoque.descricao}"></span></td>
+	              <td><span th:text="${estoque.endereco}"></span></td>
+	              <td><span th:text="${estoque.quantidade}"></span></td>
+	              <td>0</td>
+	              <td>0</td>
+	          </tr>
           </tbody>
     	</table> 
    	</div>

@@ -25,17 +25,15 @@
 	          <span class="icon-bar"></span>
 	          <span class="icon-bar"></span>
 	        </button>
-	        <a class="navbar-brand" th:href="@{/}">Electro</a>
+	        <a class="navbar-brand" th:href="@{/estoque}">Electro</a>
 	      </div>
 	  
 	      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 	        <ul class="nav navbar-nav navbar-right">
 	          <!-- <li><a href="#">Adicionar </a></li> -->
 	          <!-- <li><a href="#">Contribuições </a></li> -->
-	          <li><a th:href="@{/form}">Cotribua <span class="glyphicon glyphicon-plus pull-left" style="right: 8px;"></span></a></li>
-	          <li sec:authorize="!hasRole('USER')"><a th:href="@{/login}">Login <span class="glyphicon glyphicon-log-in pull-right" style="left: 10px;"></span></a></li>
-	          <li sec:authorize="hasRole('USER')"><a th:href="@{/contribuicoes}">Contribuições <span class="glyphicon glyphicon-ok	 pull-right" style="left: 10px;"></span></a></li>
-	          <li sec:authorize="hasRole('USER')"><a th:href="@{/logout}">Logout <span class="glyphicon glyphicon-log-out pull-right" style="left: 10px;"></span></a></li>
+	          <li><a th:href="@{/estoque/form}">Adicione <span class="glyphicon glyphicon-plus pull-left" style="right: 8px;"></span></a></li>
+	          <li><a th:href="@{/estoque}">Estoque </a></li>
 	          <!-- <li><a href="#">Logout <span class="glyphicon glyphicon-log-out pull-right" style="left: 10px;"></span></a></li> -->
 	          
 	        </ul>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4" >
+<body>	
+	<div th:include="layout/cabecalho :: header"></div>	    
+    <div class="container">
+    	
+    	<form method="POST" th:action="@{/recebimento/salvar}" >
+	    	<div  id="mensagem"></div>	
+	        <div class="form-group col-sm-3">
+	            <label for="exampleInputEmail1">Código</label>
+	            <input type="text" class="form-control" id="codigo" name="codigo" aria-describedby="emailHelp" placeholder="Código" th:onblur="|buscaInfo()|">
+	<!--             th:onclick="|buscaInfo()|" -->
+	        </div>
+	        
+	        <div class="form-group col-sm-3">
+	       		<label for="exampleInputEmail1">Quantidade</label>
+	       		 <input type="text" class="form-control" id="quantidade" name="quantidade" aria-describedby="emailHelp" placeholder="Quantidade">
+	        </div>  
+	        
+	        <div class="form-group col-sm-6">
+	            <label for="exampleInputEmail1">Endereço</label>
+	            <input type="text" class="form-control" id="endereco" aria-describedby="emailHelp" placeholder="Endereço" readonly>
+	        </div>
+	        
+	        <div class="form-group col-sm-12">
+	            <label for="exampleInputEmail1">Descrição</label>
+	            <input type="text" class="form-control" id="descricao" aria-describedby="emailHelp" placeholder="Descrição" readonly>
+	        </div> 
+	        
+	        <div class="col-sm-12">
+				<button type="submit" class="btn btn-primary">Salvar</button>
+			</div> 
+		</form>
+    </div>
+	 <div th:include="layout/rodape :: footer"></div>	
+</body>
+</html>

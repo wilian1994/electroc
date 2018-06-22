@@ -2,7 +2,9 @@ package com.electro.utils;
 
 public enum MapeamentoTelas {
 	
-	ESTOQUE ("estoque/form_estoque");
+	ESTOQUE ("estoque/form_estoque"),
+	LISTA_ESTOQUE ("estoque/lista_estoque"),
+	RECEBIMENTO ("estoque/form_recebimento");
 	
 	String path;
 	
