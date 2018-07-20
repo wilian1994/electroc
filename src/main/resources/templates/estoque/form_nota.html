@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4" >
+<body>	
+	<div th:include="layout/cabecalho :: header"></div>	    
+    <div class="container">
+    	
+    	<form method="POST" th:action="@{/nota/salvar}" th:object="${nota}">
+	    	<div  id="mensagem"></div>	
+	        <div class="form-group col-sm-3">
+	            <label for="exampleInputEmail1">Nº Nota Fiscal</label>
+	            <input type="text" class="form-control" th:field="*{numNota}" aria-describedby="emailHelp" placeholder="Código" >
+	<!--             th:onclick="|buscaInfo()|" -->
+	        </div>
+	        
+	        <div class="form-group col-sm-3">
+	       		<label for="exampleInputEmail1">Data Recebimento</label>
+	       		 <input type="text" class="form-control" th:field="*{dataRecebimento}" aria-describedby="emailHelp" placeholder="Quantidade">
+	        </div>  
+	        
+	        <div class="col-sm-12">
+				<button type="submit" class="btn btn-primary">Salvar</button>
+			</div>
+		</form>
+    </div>
+	 <div th:include="layout/rodape :: footer"></div>	
+</body>
+</html>

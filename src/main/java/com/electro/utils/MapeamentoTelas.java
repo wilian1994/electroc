@@ -4,7 +4,8 @@ public enum MapeamentoTelas {
 	
 	ESTOQUE ("estoque/form_estoque"),
 	LISTA_ESTOQUE ("estoque/lista_estoque"),
-	RECEBIMENTO ("estoque/form_recebimento");
+	RECEBIMENTO ("estoque/form_recebimento"),
+	NOTA ("estoque/form_nota");
 	
 	String path;
 	
